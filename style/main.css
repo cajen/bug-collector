@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* background-color: #f1cbff; */
+    background-color: #ffd27d;
+    font-family: 'Roboto', sans-serif;
+}
+.header {
+    text-align: center;
+    margin-top: 48px;
+    font-family: 'Rakkas', cursive;
+    font-size: x-large;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.button {
+    padding: 10px;
+    font-size: medium;
+    border: none;
+    /* background-color: maroon; */
+    /* background-color: #e0d6ff; */
+    background-color: rgb(27, 216, 216);
+    /* color: lightgray; */
+    color: white;
+}
+#div-index {
+    padding: 20px;
+    margin: 4% 35%;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    /* background-color: lightgrey; */
+    /* background-color: rgba(0, 22, 99, 0.2) */
+}
+#input-index-email, #input-index-password, #button-index-signin, #label-index-create {
+    padding: 15px;
+    margin-top: 5px;
+    /* margin-bottom: 5%; */
+    width: 90%;
+    font-size: medium;
+    border: none;
+}
+#button-index-signin {
+    margin-top: 5%;
+}
+#input-index-email {
+    margin-top: 15px
+}
+#label-index-create {
+    text-align: right;
+    margin-right: 0;
+    margin-left: 30px;
+}
+@media only screen and (max-width: 768px) {
+    body {
+        /* background-color: lightgray; */
+    }
+    .header {
+        /* font-size: medium; */
+        font-size: large;
+    }
+    #div-index {
+        padding: 0;
+        margin-top: 75px;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: none;
+    }
+}
