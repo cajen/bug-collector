@@ -76,7 +76,7 @@ table {
     /* justify-content: center; */
     /* align-items: center; */
     text-align: center;
-    /* visibility: hidden; */
+    visibility: hidden;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -94,6 +94,16 @@ table {
     margin: 5px;
     width: 40%;
     font-size: medium;
+}
+.modal-input-2 {
+    padding: 5px;
+    margin: 5px;
+    width: 22%;
+    font-size: medium;
+}
+#h1-0-index {
+    font-family: 'Rakkas', cursive;
+    margin-bottom: 10px;
 }
 #h1-0-collection {
     font-family: 'Rakkas', cursive;
@@ -135,7 +145,7 @@ table {
     font-size: medium;
     border: none;
 }
-#button-submit-collection {
+.button-submit-collection {
     width: 10%;
     padding: 5px;
     background-color: rgb(27, 216, 216);

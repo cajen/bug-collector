@@ -1,5 +1,8 @@
 const JSON_SERVER = 'http://localhost:3000';
 
+const BUGS_ID = 'id';
+const USERS_ID = 'id';
+
 function counter(init) {
     var counter = init;
     return () => counter++;
@@ -23,10 +26,16 @@ function formatURLforTable(table) {
         // return `${FIREBASE_REST}/${table}.json`;
 }
 
+function bugURL(id) { return formatURLforItemById('bugs', id); }
+function allBugsURL() { return formatURLforTable('bugs'); }
+
+function userURL(uid) { return formatURLforItemByField('users', USERS_ID, uid); }
+function allUsersURL() { return formatURLforTable('users'); }
+
 function jsonFetch(url, params) {
     return(
         fetch(url,params).then(response => {
-            if(response == 201 || response == 200) {
+            if(response.status == 201 || response.status == 200) {
                 return response.json();
             }
             else {
@@ -59,5 +68,13 @@ function deleteCRUD(url) {
 // CRUD for users
 
 function createUser(data) {
+    return createCRUD(allUsersURL(), data);
+}
 
+function getUser(uid) {
+    return readCRUD(userURL(uid));
+    // let something = readCRUD(userURL(uid)).then(function(data) {
+    //     return data[0];
+    // });
+    // return something;
 }
